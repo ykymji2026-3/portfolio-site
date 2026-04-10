@@ -1,44 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background: #f5f7fb;
+      color: #333333;
+      font-family: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+
+    header {
+      background: #38172b;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.85;
+    }
+
+    #langBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      min-width: 160px;
+      height: 35px;
+      text-align: center;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background: white;
+      color: #1f2937;
+      font-size: 14px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      min-height: 120px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .card {
+      background: #f9fafb;
+      padding: 16px;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
 <body>
+
   <header>
-    <h1>My Portfolio</h1>
-    <p>AWSを勉強中です</p>
+    <button id="langBtn" onclick="toggleLang()">Switch to English</button>
+
+    <h1 data-ja="自己紹介" data-en="Self Introduction">
+      自己紹介
+    </h1>
+
+    <p data-ja="これまでの経験やスキル、現在の学習内容についてまとめたポートフォリオサイトです"
+      data-en="This portfolio summarizes my experience, skills, and current learning">
+      これまでの経験やスキル、現在の学習内容についてまとめたポートフォリオサイトです
+    </p>
   </header>
 
   <main>
+
     <section>
-      <h2>自己紹介</h2>
-      <p>
-        はじめまして。現在AWSを中心にインフラの学習をしています。
-        GitHubでのポートフォリオ作成にも取り組んでいます。
+      <h2 data-ja="自己紹介" data-en="About Me">自己紹介</h2>
+      <p data-ja="はじめまして、ykymです。現在は金融系企業にてQAエンジニアとして品質管理に従事し、プロジェクトではPMOとして進行管理や課題管理を担当しています。現在はAWSを中心にクラウド技術やシステムの保守運用について学習を進めています。"
+        data-en="Hi, I'm ykym. I currently work as a QA engineer in the financial industry, focusing on quality assurance. I am also involved in project support as a PMO, including progress tracking and issue management. Recently, I am learning cloud technologies, mainly AWS, as well as system operation and maintenance.">
+        はじめまして、ykymです。現在は金融系企業にてQAエンジニアとして品質管理に従事し、プロジェクトではPMOとして進行管理や課題管理を担当しています。現在はAWSを中心にクラウド技術やシステムの保守運用について学習を進めています。
       </p>
     </section>
 
     <section>
-      <h2>スキル</h2>
+      <h2 data-ja="スキル" data-en="Skills">スキル</h2>
+
+      <h3 data-ja="業務スキル" data-en="Professional Skills">業務スキル</h3>
       <ul>
-        <li>AWS（学習中）</li>
-        <li>Git / GitHub</li>
-        <li>HTML / CSS</li>
+        <li data-ja="テスト設計 / 品質管理" data-en="Test design / Quality assurance">テスト設計 / 品質管理</li>
+        <li data-ja="進行管理 / 課題管理" data-en="Progress tracking / Issue management">進行管理 / 課題管理</li>
+        <li data-ja="関係者との調整" data-en="Stakeholder coordination">関係者との調整</li>
+      </ul>
+
+      <h3 data-ja="プログラミング" data-en="Programming">プログラミング</h3>
+      <ul>
+        <li data-ja="Python（約2年）" data-en="Python (approx. 2 years)">Python（約2年）</li>
+        <li data-ja="Java（約1年）" data-en="Java (approx. 1 year)">Java（約1年）</li>
+        <li data-ja="C言語（約3年）" data-en="C (approx. 3 years)">C言語（約3年）</li>
+        <li data-ja="SQL（約2年）" data-en="SQL (approx. 2 years)">SQL（約2年）</li>
+        <li data-ja="シェルスクリプト（学習中）" data-en="Shell scripting (learning)">シェルスクリプト（学習中）</li>
+      </ul>
+
+      <h3 data-ja="ツール / インフラ" data-en="Tools / Infrastructure">ツール / インフラ</h3>
+      <ul>
+        <li data-ja="AWS（学習中）" data-en="AWS (learning)">AWS（学習中）</li>
+        <li data-ja="Git / GitHub" data-en="Git / GitHub">Git / GitHub</li>
+        <li data-ja="HTML / CSS（学習中）" data-en="HTML / CSS (learning)">HTML / CSS（学習中）</li>
+        <li data-ja="ドキュメント作成・情報整理（Google Docs / スプレッドシート）"
+          data-en="Documentation and information organization (Google Docs / Spreadsheets)">
+          ドキュメント作成・情報整理（Google Docs / スプレッドシート）
+        </li>
       </ul>
     </section>
 
     <section>
-      <h2>学習内容</h2>
+      <h2 data-ja="資格・言語" data-en="Certifications & Languages">資格・言語</h2>
+      <ul>
+        <li data-ja="基本情報技術者" data-en="Fundamental Information Technology Engineer">基本情報技術者</li>
+        <li data-ja="証券外務員一種" data-en="JSDA">JSDA</li>
+        <li data-ja="TOEIC 915（英語対応可能）" data-en="TOEIC 915 (comfortable working in English)">TOEIC 915（英語対応可能）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-ja="制作物" data-en="Projects">制作物</h2>
+      <div class="card">
+        <h3 data-ja="ポートフォリオサイト" data-en="Portfolio Website">ポートフォリオサイト</h3>
+        <p data-ja="自身の経歴やスキル、学習内容を整理して発信するために作成したサイトです。HTML/CSSで作成し、GitHubで管理しています。今後はAWS S3を利用した公開も予定しています。"
+          data-en="This website was created to organize and present my background, skills, and current learning. It is built with HTML/CSS and managed on GitHub. I also plan to publish it using AWS S3.">
+          自身の経歴やスキル、学習内容を整理して発信するために作成したサイトです。HTML/CSSで作成し、GitHubで管理しています。今後はAWS S3を利用した公開も予定しています。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-ja="強み" data-en="Strengths">強み</h2>
+      <ul>
+        <li data-ja="品質視点を持ちながらプロジェクト全体を捉えられること"
+          data-en="Able to view projects from both quality and overall coordination perspectives">
+          品質視点を持ちながらプロジェクト全体を捉えられること
+        </li>
+        <li data-ja="PMOとして進行管理や関係者調整に対応できること"
+          data-en="Able to support project progress management and stakeholder coordination as a PMO">
+          PMOとして進行管理や関係者調整に対応できること
+        </li>
+        <li data-ja="英語でのコミュニケーションに対応可能です" data-en="Comfortable communicating in English">
+          英語でのコミュニケーションに対応可能です
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 data-ja="得意・不得意" data-en="Strengths & Areas for Growth">得意・不得意</h2>
+
+      <div class="card">
+        <h3 data-ja="得意なこと" data-en="Areas of Strength">得意なこと</h3>
+        <ul>
+          <li data-ja="品質を意識したテスト設計" data-en="Test design with a strong focus on quality">品質を意識したテスト設計</li>
+          <li data-ja="プロジェクトの進行管理・課題管理" data-en="Project progress tracking and issue management">プロジェクトの進行管理・課題管理</li>
+          <li data-ja="関係者との調整・コミュニケーション" data-en="Coordination and communication with stakeholders">関係者との調整・コミュニケーション
+          </li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <h3 data-ja="不得意・今後強化したいこと" data-en="Areas I Am Currently Strengthening">不得意・今後強化したいこと</h3>
+        <ul>
+          <li data-ja="バックエンド開発の実務経験" data-en="Hands-on backend development experience">バックエンド開発の実務経験</li>
+          <li data-ja="AWSを用いたインフラ構築（学習中）" data-en="Infrastructure building with AWS (currently learning)">
+            AWSを用いたインフラ構築（学習中）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-ja="GitHub" data-en="GitHub">GitHub</h2>
       <p>
-        AWSの基礎（S3・EC2など）や、
-        Webサイトの作成・公開方法を学習しています。
+        <a href="https://github.com/ykymji2026-3" target="_blank" rel="noopener noreferrer">GitHubはこちら</a>
       </p>
     </section>
 
     <section>
-      <h2>GitHub</h2>
-      <a href="https://github.com/ユーザー名" target="_blank">
-        GitHubはこちら
-      </a>
+      <h2 data-ja="今後の目標" data-en="Goals">今後の目標</h2>
+      <p data-ja="AWSを活用したインフラ構築スキルの習得を目指し、品質とプロジェクト推進の両面から貢献できるよう、引き続き学習に取り組んでいます。"
+        data-en="I am continuing to build my skills in cloud and infrastructure, especially with AWS, so that I can contribute from both quality assurance and project support perspectives.">
+        AWSを活用したインフラ構築スキルの習得を目指し、品質とプロジェクト推進の両面から貢献できるよう、引き続き学習に取り組んでいます。
+      </p>
     </section>
+
   </main>
 
   <footer>
-    <p>© 2026 Portfolio</p>
+    <p data-ja="© 2026 Portfolio" data-en="© 2026 Portfolio">© 2026 Portfolio</p>
   </footer>
+
+  <script>
+    let currentLang = "ja";
+
+    function toggleLang() {
+      currentLang = currentLang === "ja" ? "en" : "ja";
+
+      document.querySelectorAll("[data-ja]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + currentLang);
+      });
+
+      const btn = document.getElementById("langBtn");
+      btn.textContent = currentLang === "ja" ? "Switch to English" : "日本語に切り替える";
+    }
+  </script>
+
 </body>
+
+</html>
