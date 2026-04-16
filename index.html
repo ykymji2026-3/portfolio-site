@@ -281,10 +281,12 @@
   </footer>
 
   <script>
-    let currentLang = "ja";
+    let currentLang = localStorage.getItem("lang") || "ja";
 
     function toggleLang() {
       currentLang = currentLang === "ja" ? "en" : "ja";
+
+      localStorage.setItem("lang", currentLang);
 
       document.querySelectorAll("[data-ja]").forEach(el => {
         el.textContent = el.getAttribute("data-" + currentLang);
@@ -293,6 +295,19 @@
       const btn = document.getElementById("langBtn");
       btn.textContent = currentLang === "ja" ? "Switch to English" : "日本語に切り替える";
     }
+
+    function applyLang() {
+      document.querySelectorAll("[data-ja]").forEach(el => {
+        el.textContent = el.getAttribute("data-" + currentLang);
+      });
+    
+      document.getElementById("langBtn").textContent =
+        currentLang === "ja" ? "Switch to English" : "日本語に切り替える";
+    }
+
+  window.onload = () => {
+    applyLang();
+  };
   </script>
 
 </body>
