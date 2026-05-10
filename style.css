@@ -453,6 +453,11 @@ h3 {
   padding: 30px;
 }
 
+.project-list {
+  display: grid;
+  gap: 16px;
+}
+
 .project-label {
   margin-bottom: 10px;
 }
