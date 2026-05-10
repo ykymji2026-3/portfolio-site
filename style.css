@@ -455,7 +455,7 @@ h3 {
 
 .project-list {
   display: grid;
-  gap: 24px;
+  gap: 36px;
 }
 
 .project-label {
