@@ -502,6 +502,23 @@ h3 {
   color: var(--accent-dark);
 }
 
+.button-light {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+}
+
+.button-light:hover {
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 footer {
   padding: 34px 0 48px;
   color: var(--muted);
@@ -579,6 +596,10 @@ footer {
   }
 
   .hero-actions {
+    display: grid;
+  }
+
+  .contact-actions {
     display: grid;
   }
 
