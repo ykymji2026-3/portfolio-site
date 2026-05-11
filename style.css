@@ -503,14 +503,16 @@ h3 {
 }
 
 .button-light {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #ffffff;
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #126b45;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
 }
 
 .button-light:hover {
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: #f1fbf6;
+  border-color: #f1fbf6;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
 }
 
 .contact-actions {
